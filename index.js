@@ -4,7 +4,7 @@ const port = 3000
 app.use(express.json())
 const mongoose = require('mongoose')
 const ServiceRoute = require('./Routes/ServiceRoute')
-const PromotionRoute = require('./Routes/ServiceRoute')
+const PromotionRoute = require('./Routes/PromotionRoute')
 // const Promotion =require ('Models/Promotion.js')
 // const Service =require ('Models/Service.js')
 
