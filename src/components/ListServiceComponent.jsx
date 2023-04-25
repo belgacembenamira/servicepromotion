@@ -11,6 +11,8 @@
     * - Modification    : 
 **/
 import React, { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.css';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
@@ -46,6 +48,8 @@ const ListServiceComponent = () => {
                         <th>Service Description</th>
                         <th>Service Location</th>
                         <th>Actions</th>
+                        <th>Add Promotion</th> {/* Nouvelle colonne */}
+
                     </tr>
                 </thead>
                 <tbody>
@@ -61,6 +65,15 @@ const ListServiceComponent = () => {
                                 <Link to={`/services/supprimer/${service._id}`} className="btn btn-primary p-1 m-1">Supprimer</Link>
 
                             </td>
+                            <td>
+                                <Link to={`/service/${service._id}/promotion/ajouter`}>
+                                    <Button variant="success">Add Promotion</Button>
+                                </Link>
+
+
+
+                            </td>
+
 
                         </tr>
                     ))}

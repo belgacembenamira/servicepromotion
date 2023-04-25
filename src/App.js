@@ -2,23 +2,14 @@
     * @description      : 
     * @author           : belgacem
     * @group            : 
-    * @created          : 24/04/2023 - 23:08:01
+    * @created          : 25/04/2023 - 18:41:01
     * 
     * MODIFICATION LOG
     * - Version         : 1.0.0
-    * - Date            : 24/04/2023
+    * - Date            : 25/04/2023
     * - Author          : belgacem
     * - Modification    : 
 **/
-/**
- * @description      : 
- * @created          : 24/04/2023 - 22:44:08
- * @modified         : 
- * @modifier         :
- * @version          : 1.0.0
- * @group            : 
- */
-
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
@@ -27,6 +18,8 @@ import CreateServiceComponent from './components/CreateServiceComponent';
 import ListServiceComponent from './components/ListServiceComponent';
 import UpdateServiceComponent from './components/UpdateServiceComponent';
 import DeleteServiceComponent from './components/DeletServiceComponent';
+import ListPromotionComponent  from './components/ListPromotionComponent';
+import UpdatePromotionComponent from './components/UpdatePromotionComponent';
 
 const App = () => {
   return (
@@ -37,7 +30,7 @@ const App = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Accueil</Nav.Link>
-            <Nav.Link href="/services/ajouter">Ajouter un service</Nav.Link>
+            <Nav.Link href="/promotion">Promotion</Nav.Link>
           </Nav>
           <Nav>
             <Navbar.Text>Ajouter Promotion</Navbar.Text>
@@ -49,6 +42,10 @@ const App = () => {
         <Route path="/services/ajouter" element={<CreateServiceComponent />} />
         <Route path="/services/modifier/:id" element={<UpdateServiceComponent />} />
         <Route path="/services/supprimer/:id" element={<DeleteServiceComponent />} />
+        <Route path="/promotion/modifier/:id" element={< UpdatePromotionComponent/>} />
+
+        <Route path="/promotion" element={< ListPromotionComponent/>} />
+
       </Routes>
     </div>
   );
