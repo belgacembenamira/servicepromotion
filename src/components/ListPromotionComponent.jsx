@@ -1,3 +1,15 @@
+/**
+    * @description      : 
+    * @author           : belgacem
+    * @group            : 
+    * @created          : 26/04/2023 - 00:35:22
+    * 
+    * MODIFICATION LOG
+    * - Version         : 1.0.0
+    * - Date            : 26/04/2023
+    * - Author          : belgacem
+    * - Modification    : 
+**/
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
@@ -46,7 +58,7 @@ const ListPromotionComponent = () => {
                             <td>
                                 <Link to={`/promotion/modifier/${promotion._id}`} className="btn btn-primary p-2 m-2">Modifier</Link>
                                 <br />
-                                <Link to={`/promotions/supprimer/${promotion._id}`} className="btn btn-primary p-1 m-1">Supprimer</Link>
+                                <Link to={`/promotion/supprimer/${promotion._id}`} className="btn btn-primary p-1 m-1">Supprimer</Link>
 
                             </td>
                         </tr>

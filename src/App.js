@@ -20,6 +20,8 @@ import UpdateServiceComponent from './components/UpdateServiceComponent';
 import DeleteServiceComponent from './components/DeletServiceComponent';
 import ListPromotionComponent  from './components/ListPromotionComponent';
 import UpdatePromotionComponent from './components/UpdatePromotionComponent';
+import CreatePromotionComponent from './components/CreatePromotionComponent';
+import DeletePromotionComponent from './components/DeletePromotionComponent'
 
 const App = () => {
   return (
@@ -32,9 +34,9 @@ const App = () => {
             <Nav.Link href="/">Accueil</Nav.Link>
             <Nav.Link href="/promotion">Promotion</Nav.Link>
           </Nav>
-          <Nav>
+          {/* <Nav>
             <Navbar.Text>Ajouter Promotion</Navbar.Text>
-          </Nav>
+          </Nav> */}
         </Navbar.Collapse>
       </Navbar>
       <Routes>
@@ -45,6 +47,11 @@ const App = () => {
         <Route path="/promotion/modifier/:id" element={< UpdatePromotionComponent/>} />
 
         <Route path="/promotion" element={< ListPromotionComponent/>} />
+<Route path="/service/:id/promotion/ajouter" element={<CreatePromotionComponent />} />
+
+<Route path="/promotion/supprimer/:id" element={< DeletePromotionComponent/>} />
+
+
 
       </Routes>
     </div>
