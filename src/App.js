@@ -18,7 +18,7 @@ import CreateServiceComponent from './components/CreateServiceComponent';
 import ListServiceComponent from './components/ListServiceComponent';
 import UpdateServiceComponent from './components/UpdateServiceComponent';
 import DeleteServiceComponent from './components/DeletServiceComponent';
-import ListPromotionComponent  from './components/ListPromotionComponent';
+import ListPromotionComponent from './components/ListPromotionComponent';
 import UpdatePromotionComponent from './components/UpdatePromotionComponent';
 import CreatePromotionComponent from './components/CreatePromotionComponent';
 import DeletePromotionComponent from './components/DeletePromotionComponent'
@@ -33,6 +33,7 @@ const App = () => {
           <Nav className="mr-auto">
             <Nav.Link href="/">Accueil</Nav.Link>
             <Nav.Link href="/promotion">Promotion</Nav.Link>
+            <Nav.Link href="/services/ajouter">Ajouter service</Nav.Link>
           </Nav>
           {/* <Nav>
             <Navbar.Text>Ajouter Promotion</Navbar.Text>
@@ -43,14 +44,15 @@ const App = () => {
         <Route path="/" element={<ListServiceComponent />} />
         <Route path="/services/ajouter" element={<CreateServiceComponent />} />
         <Route path="/services/modifier/:id" element={<UpdateServiceComponent />} />
-        <Route path="/services/supprimer/:id" element={<DeleteServiceComponent />} />
-        <Route path="/promotion/modifier/:id" element={< UpdatePromotionComponent/>} />
+        <Route path="/promotion/modifier/:id" element={< UpdatePromotionComponent />} />
 
-        <Route path="/promotion" element={< ListPromotionComponent/>} />
-<Route path="/service/:id/promotion/ajouter" element={<CreatePromotionComponent />} />
+        <Route path="/promotion" element={< ListPromotionComponent />} />
+        <Route path="/service/:id/promotion/ajouter" element={<CreatePromotionComponent />} />
 
-<Route path="/promotion/supprimer/:id" element={< DeletePromotionComponent/>} />
+        <Route path="/promotion/supprimer/:id" element={<DeletePromotionComponent />} />
 
+
+        <Route path="/services/:id/supprimer-promotion" element={<DeleteServiceComponent />} />
 
 
       </Routes>

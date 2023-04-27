@@ -62,8 +62,16 @@ const ListServiceComponent = () => {
                             <td>
                                 <Link to={`/services/modifier/${service._id}`} className="btn btn-primary p-2 m-2">Modifier</Link>
                                 <br />
-                                <Link to={`/services/supprimer/${service._id}`} className="btn btn-primary p-1 m-1">Supprimer</Link>
+                                {/* /********** KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK */}
+                                <Link to={`/services/${service._id}/supprimer-promotion`}>
+                                    <Button variant="success">Delete</Button>
+                                </Link>
 
+
+
+
+
+                                {/* /********** KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK */}
                             </td>
                             <td>
                                 <Link to={`/service/${service._id}/promotion/ajouter`}>

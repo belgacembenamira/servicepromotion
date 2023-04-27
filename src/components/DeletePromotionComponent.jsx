@@ -15,13 +15,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-const DeletePromotionComponent = () => {
-    const [promotion, setPromotion] = useState({});
+const 
+DeletePromotionComponent = () => {
+    const [, setPromotion] = useState({});
     const { id } = useParams(); // récupère l'id de la promotion depuis l'URL
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3000/promotion/${id}`)
+            .get(`http://localhost:3000/services/supprimer/${id}`)
             .then(response => {
                 setPromotion(response.data);
             })
@@ -50,7 +51,7 @@ const DeletePromotionComponent = () => {
 
     return (
         <div>
-                               <p>Êtes-vous sûr de vouloir supprimer Promotion </p>
+            <p>Êtes-vous sûr de vouloir supprimer Promotion </p>
 
             <form onSubmit={handleDelete}>
                 <div className="form-group">
